@@ -24,7 +24,7 @@
 
     <footer class="site-footer">
         <div class="container">
-            <p>{{ date(Y) }} - Projeto Acadêmico PW3
+            <p>{{ date('Y') }} - Projeto Acadêmico PW3
         </div>
     </footer>
 
