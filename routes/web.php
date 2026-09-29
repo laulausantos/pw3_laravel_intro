@@ -4,6 +4,8 @@ use App\Models\User;
 use App\Http\Controllers\LivroController;
 use App\Http\Controllers\ProdutoController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EventoController;
+
 
 Route::get('/', function () {
     return view('home');
@@ -26,3 +28,9 @@ Route::get('/teste-orm', function() {
 });
 Route::get('/livros', [LivroController::class , 'index']);
 Route::post('/livros', [LivroController::class , 'store']);
+
+// Rotas da Agenda de Eventos
+Route::get('/eventos', [EventoController::class, 'index']);
+Route::get('/eventos/novo', [EventoController::class, 'create']);
+Route::post('/eventos', [EventoController::class, 'store']);
+
